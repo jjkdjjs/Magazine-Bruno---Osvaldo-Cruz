@@ -3,9 +3,8 @@ import styles from './Header.module.css';
 export default function Header() {
     return <>
         <header className={styles.header}>
-            <div className={styles.headerBox}>
-                <h2>Magazine Bruninho</h2>
-                <p>Tudo de A à Z</p>
+            <div className={styles.headerTitle}>
+                <h2>LojaX</h2>
             </div>
             <div className={styles.headerBox}>
                 <nav className={styles.headerNav}>
