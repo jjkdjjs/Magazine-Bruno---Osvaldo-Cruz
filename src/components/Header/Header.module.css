@@ -1,4 +1,4 @@
-.header {
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');.header {
     margin: 0;
     padding: 20px;
     background-color: rgb(164, 248, 220);
@@ -9,11 +9,55 @@
 }
 .headerTitle{
     font-size: 20px;
-    font-family:'Courier New', Courier, monospace ;
+    font-family: "Marcellus", serif;
+  font-weight: 400;
+  font-style: normal;
 }
-.headerLink{
+.headerLink {
     text-decoration: none;
-    color:rgb(34, 99, 99);
-    gap: 20px;
-    padding: 20px;
+    color: rgb(34, 99, 99);
+    font-family: "Marcellus", serif;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 14px;
+    margin-top: 5px;
+
+    border-radius: 10px;
+
+    background: transparent;
+
+    transition: all 0.25s ease-in-out;
+
+    position: relative;
+}
+
+/* underline animado */
+.headerLink::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 2px;
+    width: 0%;
+    height: 2px;
+    background: rgb(34, 99, 99);
+    transition: all 0.25s ease-in-out;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+.headerLink:hover {
+    color: rgb(34, 99, 99);
+    transform: translateY(-2px);
+}
+
+.headerLink:hover::after {
+    width: 70%;
+}
+
+/* clique */
+.headerLink:active {
+    transform: scale(0.97);
 }
