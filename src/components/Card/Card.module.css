@@ -28,3 +28,40 @@
     margin: 0.5rem 20px;
     margin: 20px;
 }
+.buttonBuy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 15px;
+    outline: 3px aqua solid;
+    outline-offset: -3px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 400ms;
+    margin: 10px;
+  }
+
+  .buttonBuy .text {
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+    transition: 400ms;
+  }
+
+  .buttonBuy svg path {
+    transition: 400ms;
+  }
+
+  .buttonBuy:hover {
+    background-color: transparent;
+  }
+
+  .buttonBuy:hover .text {
+    color: #181717;
+  }
+
+  .buttonBuy:hover svg path {
+    fill: #181717;
+  }
