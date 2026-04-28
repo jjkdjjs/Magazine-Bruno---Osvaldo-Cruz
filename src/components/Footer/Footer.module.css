@@ -1,0 +1,113 @@
+.footer {
+    background-color: #121212;
+    color: #fff;
+    padding: 60px 50px 20px;
+    font-family: 'Marcellus', serif;
+    border-top: 1px solid #333;
+    margin-top: 50px;
+}
+
+.footerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Seção da Marca */
+.logo {
+    color: aqua;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.slogan {
+    color: #888;
+    font-size: 0.9rem;
+    max-width: 250px;
+}
+
+/* Títulos das colunas */
+.footerContainer h4 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Links de Navegação */
+.footerNav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footerNav a {
+    color: #aaa;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 0.95rem;
+}
+
+.footerNav a:hover {
+    color: aqua;
+    padding-left: 5px;
+}
+
+/* Ícones Sociais (Exemplo Simples) */
+.socialIcons {
+    display: flex;
+    gap: 15px;
+}
+
+.socialIcons a {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.socialIcons a:hover {
+    background-color: aqua;
+    color: #000;
+    border-color: aqua;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+/* Copyright Bar */
+.copyright {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+    color: #555;
+    font-size: 0.8rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 20px 20px;
+    }
+    
+    .footerContainer {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footerNav, .socialIcons {
+        align-items: center;
+        justify-content: center;
+    }
+}
