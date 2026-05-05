@@ -1,10 +1,12 @@
 import ConteudoPrincipal from "../../components/ConteudoPrincipal";
 
 function Carrinho() {
-    return(
-        <section>
-            <h1>Seu carrinho:</h1>
+    return (
+        <main>
+            <h1 className="titulo">Seu carrinho:</h1>
             <ConteudoPrincipal />
-        </section>
-    )
+        </main>
+    );
 }
+
+export default Carrinho;

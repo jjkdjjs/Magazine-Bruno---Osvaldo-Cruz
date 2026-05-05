@@ -1,8 +1,8 @@
 import styles from './ConteudoPrincipal.module.css';
 import Card from '../Card';
 
-function ConteudoPrincipal() {
-  const listaProdutos = [
+function ConteudoPrincipal({ produtos: produtosExternos }) {
+    const listaProdutos = produtosExternos || [
     {
       id: 1,
       nome: 'Camisa de Cerveja ',
@@ -50,7 +50,7 @@ function ConteudoPrincipal() {
     },
     {
       id: 6,
-      nome: 'Camisa do Tupac',
+      nome: 'Camisa do 3Tupac',
       descricao: 'Camisa de algodão com estampa do Tupac',
       em_estoque: true,
       preco: 69.9,

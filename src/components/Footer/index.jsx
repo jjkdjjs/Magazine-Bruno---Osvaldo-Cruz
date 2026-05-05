@@ -14,8 +14,7 @@ export default function Footer() {
                     <nav className={styles.footerNav}>
                         <a href="/home">Home</a>
                         <a href="/produtos">Produtos</a>
-                        <a href="/sobre">Sobre Nós</a>
-                        <a href="/contato">Contato</a>
+                        <a href="/sobre">Carrinho</a>
                     </nav>
                 </div>
 
