@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Produtos from './pages/Produtos';
 import Carrinho from './pages/Carrinho';
+import NotFound from './pages/NotFound';
 
 function AppRoutes() {
     return (
@@ -13,6 +14,7 @@ function AppRoutes() {
                 <Route path="/" element={<Home />} />
                 <Route path="/produtos" element={<Produtos />} />
                 <Route path="/carrinho" element={<Carrinho />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
         </BrowserRouter>
