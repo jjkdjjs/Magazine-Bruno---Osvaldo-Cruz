@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
 .text_404 {
     position: absolute;
     display: flex;
@@ -23,12 +25,18 @@
     transform: scaleY(24.5) scaleX(9);
   }
 
+  body.notfound-page {
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1a2e 100%);
+    min-height: 100vh;
+  }
+
   .main_wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30em;
-    height: 30em;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
   }
 
   .main {
@@ -36,7 +44,35 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 5em;
+    margin-top: 2em;
+  }
+
+  .main_wrapper .back-home {
+    margin-top: 3em;
+    padding: 14px 32px;
+    background: aqua;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: "Marcellus", serif;
+  }
+
+  .main_wrapper .back-home:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  }
+
+  .notfound-msg {
+    color: aqua;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 2em;
+    font-family: "Marcellus", serif;
   }
 
   .antenna {

@@ -1,11 +1,15 @@
 import styles from './ConteudoPrincipal.module.css';
 import Card from '../Card';
+import { useCarrinho } from "../../Context/CarrinhoContext";
 
 function ConteudoPrincipal({ produtos: produtosExternos }) {
-    const listaProdutos = produtosExternos || [
+
+  const { adicionarAoCarrinho } = useCarrinho();
+
+  const listaProdutos = produtosExternos || [
     {
       id: 1,
-      nome: 'Camisa de Cerveja ',
+      nome: 'Camisa de Cerveja',
       descricao: 'Camisa de algodão',
       em_estoque: true,
       preco: 49.9,
@@ -111,7 +115,6 @@ function ConteudoPrincipal({ produtos: produtosExternos }) {
       imagem:
         'https://i.pinimg.com/736x/ef/5f/d5/ef5fd55b1192cf3bf5e0c3e8d0c762a3.jpg',
     },
-
   ];
 
   return (
@@ -125,6 +128,7 @@ function ConteudoPrincipal({ produtos: produtosExternos }) {
             est={produto.em_estoque}
             price={produto.preco}
             img={produto.imagem}
+            onComprar={() => adicionarAoCarrinho(produto)}
           />
         ))}
       </div>

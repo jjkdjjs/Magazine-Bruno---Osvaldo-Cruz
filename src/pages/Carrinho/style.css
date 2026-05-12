@@ -1,5 +1,181 @@
-.titulo{
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+.carrinho-page {
+    padding: 40px 24px;
+    min-height: 100vh;
+    background: #0a0e27;
+    color: white;
+}
+
+.carrinho-header {
     text-align: center;
-    margin-top: 20px;
-    
+    margin-bottom: 40px;
+}
+
+.carrinho-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: aqua;
+    font-family: "Marcellus", serif;
+}
+
+.carrinho-header p {
+    color: #aaa;
+    font-size: 1.05rem;
+}
+
+.carrinho-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carrinho-produtos {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.produto-carrinho {
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(0, 255, 255, 0.05));
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.produto-carrinho:hover {
+    border-color: aqua;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.produto-imagem {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.produto-info {
+    flex: 1;
+}
+
+.produto-info h2 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.produto-info p {
+    color: aqua;
+    font-weight: 600;
+}
+
+.quantidade-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantidade-container span {
+    color: #aaa;
+}
+
+.quantidade-container button {
+    width: 35px;
+    height: 35px;
+    border: 1px solid aqua;
+    border-radius: 8px;
+    background: transparent;
+    color: aqua;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.quantidade-container button:hover {
+    background: aqua;
+    color: #000;
+}
+
+.subtotal {
+    font-weight: bold;
+    font-size: 18px;
+    color: aqua;
+}
+
+.btn-remover {
+    background: rgba(255, 69, 69, 0.2);
+    color: #ff4545;
+    border: 1px solid #ff4545;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-remover:hover {
+    background: rgba(255, 69, 69, 0.3);
+}
+
+.carrinho-vazio {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.carrinho-vazio h2 {
+    color: #aaa;
+    font-family: "Marcellus", serif;
+}
+
+.resumo-compra {
+    flex: 1;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(0, 255, 255, 0.05));
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    padding: 25px;
+    border-radius: 15px;
+    position: sticky;
+    top: 100px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.resumo-compra h2 {
+    color: aqua;
+    font-family: "Marcellus", serif;
+    margin-bottom: 20px;
+}
+
+.resumo-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #aaa;
+}
+
+.btn-finalizar {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid aqua;
+    border-radius: 12px;
+    background: aqua;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-finalizar:hover {
+    background: transparent;
+    color: aqua;
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
 }

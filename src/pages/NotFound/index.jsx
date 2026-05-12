@@ -1,4 +1,5 @@
 import './style.css';
+import { Link } from 'react-router-dom';
 
 function NotFound() {
     return (
@@ -58,6 +59,11 @@ function NotFound() {
           <div className="text_4042">0</div>
           <div className="text_4043">4</div>
         </div>
+        <div className="notfound-msg">
+          <p>Página não encontrada!</p>
+          <p>Parece que o que você buscava se perdeu no caminho...</p>
+        </div>
+        <Link to="/" className="back-home">← Voltar à Home</Link>
       </div>
     );
 }

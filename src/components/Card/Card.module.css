@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 .card {
-    background: #1e1e1e;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.05), rgba(0, 255, 255, 0.02));
+    background-color: #1e1e1e;
     border-radius: 16px;
     width: 320px;
     margin: 2rem 20px;
     overflow: hidden;
-    border: 1px solid #333;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     color: #fff;
     font-family: 'Inter', sans-serif;
@@ -14,8 +15,8 @@
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 255, 255, 0.2);
+    transform: translateY(-12px);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
     border-color: aqua;
 }
 
@@ -24,54 +25,58 @@
     height: 280px;
     object-fit: cover;
     transition: transform 0.5s ease;
+    display: block;
 }
 
 .card:hover .img {
-    transform: scale(1.08);
+    transform: scale(1.1);
 }
 
 .title {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 700;
-    margin: 20px 20px 10px;
+    margin: 18px 18px 8px;
     color: #fff;
     font-family: "Marcellus", serif;
+    line-height: 1.3;
 }
 
 .description {
-    font-size: 0.9rem;
-    margin: 0 20px;
+    font-size: 0.85rem;
+    margin: 0 18px;
     color: #aaa;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 .price {
     font-size: 1.6rem;
     font-weight: 800;
-    margin: 20px;
+    margin: 18px 18px 16px;
     color: aqua;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
 }
 
 .outOfStock {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    background: rgba(255, 69, 69, 0.9);
+    top: 12px;
+    right: 12px;
+    background: linear-gradient(135deg, rgba(255, 69, 69, 0.9), rgba(200, 50, 50, 0.9));
     color: #fff;
-    padding: 8px 16px;
+    padding: 10px 16px;
     border-radius: 8px;
     font-weight: 700;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     z-index: 10;
+    box-shadow: 0 0 15px rgba(255, 69, 69, 0.4);
 }
 
 .buttonBuy {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: calc(100% - 40px); 
+    width: calc(100% - 36px);
     padding: 12px;
     gap: 12px;
     background-color: aqua;
@@ -79,14 +84,15 @@
     border: 2px solid aqua;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin: 0 20px 20px;
+    margin: 0 18px 18px;
+    font-weight: 700;
 }
 
 .buttonBuy .text {
     color: #000;
     font-weight: 700;
     font-size: 1rem;
-    margin: 0; 
+    margin: 0;
 }
 
 .buttonBuy svg path {
@@ -95,8 +101,13 @@
 
 .buttonBuy:hover {
     background-color: transparent;
-    transform: scale(1.02);
-    color:aqua;
+    color: aqua;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.buttonBuy:hover .text {
+    color: aqua;
 }
 
 .buttonBuy:hover .text {
