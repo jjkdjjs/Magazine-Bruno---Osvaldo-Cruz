@@ -92,7 +92,7 @@ function Carrinho() {
                         <div className="carrinho-vazio">
 
                             <h2>
-                                Seu carrinho está vazio 🛒
+                                Seu carrinho está vazio 
                             </h2>
 
                         </div>

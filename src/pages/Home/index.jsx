@@ -1,6 +1,8 @@
 import "./style.css";
 import ConteudoPrincipal from "../../components/ConteudoPrincipal";
 import { useState } from "react";
+import { Link } from 'react-router-dom';
+import produtos from '../../data/produtos';
 
 function Home() {
     const [email, setEmail] = useState("");
@@ -51,7 +53,12 @@ function Home() {
 
             <section className="home-products">
                 <h2>Produtos em Destaque</h2>
-                <ConteudoPrincipal />
+                <ConteudoPrincipal produtos={produtos.slice(0, 3)} />
+                <div className="home-more-button">
+                    <Link to="/produtos" className="button-view-more">
+                        Ver mais produtos
+                    </Link>
+                </div>
             </section>
 
             <section className="home-promo">
