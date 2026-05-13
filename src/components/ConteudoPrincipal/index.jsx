@@ -115,6 +115,98 @@ function ConteudoPrincipal({ produtos: produtosExternos }) {
       imagem:
         'https://i.pinimg.com/736x/ef/5f/d5/ef5fd55b1192cf3bf5e0c3e8d0c762a3.jpg',
     },
+    {
+      id: 13,
+      nome: 'Colar de Bitucas',
+      descricao: 'Colar de nicotina com predras preciosas',
+      em_estoque: true,
+      preco: 599.9,
+      imagem:
+        'https://i.pinimg.com/736x/10/59/30/10593009a6d860423293a1c385eec3f5.jpg',
+    },
+    {
+      id: 14,
+      nome: 'Óculos de Dedo',
+      descricao: 'Óculos de alta qualidade',
+      em_estoque: true,
+      preco: 99.9,
+      imagem:
+        'https://i.pinimg.com/736x/4d/44/24/4d442471905c395baba28664e499453f.jpg',
+    },
+    {
+      id: 15,
+      nome: 'Óculos de Dúvida',
+      descricao: 'Óculos',
+      em_estoque: true,
+      preco: 99.9,
+      imagem:
+        'https://i.pinimg.com/1200x/d9/6e/62/d96e627351d3758cfc7fdc384eed4f37.jpg',
+    },
+    {
+      id: 16,
+      nome: 'Anel do Samuel',
+      descricao: 'Anel de tampa de Maionese do Ken',
+      em_estoque: true,
+      preco: 59.9,
+      imagem:
+        'https://i.pinimg.com/736x/ea/ce/f7/eacef7a61d1a22e85a8fba7353dfda08.jpg',
+    },
+    {
+      id: 17,
+      nome: 'Anel',
+      descricao: 'Anel de dedo de Morto',
+      em_estoque: true,
+      preco: 89.9,
+      imagem:
+        'https://i.pinimg.com/736x/15/31/bb/1531bb958c42611fb99c7c32d1127156.jpg',
+    },
+
+    {
+      id: 18,
+      nome: 'Brinco Pika',
+      descricao: 'Brinco de alta qualidade',
+      em_estoque: true,
+      preco: 99.9,
+      imagem:
+        'https://i.pinimg.com/736x/83/65/6e/83656e14a02950dc5840aee354f20b65.jpg',
+    },
+    {
+      id: 19,
+      nome: 'Óculos de Amante',
+      descricao: 'Óculos de alta performance para amantes de moda',
+      em_estoque: true,
+      preco: 109.9,
+      imagem:
+        'https://i.pinimg.com/736x/e8/1f/ff/e81fffcb9670ca69d1ffd92521a858ff.jpg',
+    },
+    {
+      id: 18,
+      nome: 'Brinco Pika',
+      descricao: 'Brinco de alta qualidade',
+      em_estoque: true,
+      preco: 99.9,
+      imagem:
+        'https://i.pinimg.com/736x/83/65/6e/83656e14a02950dc5840aee354f20b65.jpg',
+    },
+    {
+      id: 18,
+      nome: 'Brinco Pika',
+      descricao: 'Brinco de alta qualidade',
+      em_estoque: true,
+      preco: 99.9,
+      imagem:
+        'https://i.pinimg.com/736x/83/65/6e/83656e14a02950dc5840aee354f20b65.jpg',
+    },
+    {
+      id: 18,
+      nome: 'Brinco Pika',
+      descricao: 'Brinco de alta qualidade',
+      em_estoque: true,
+      preco: 99.9,
+      imagem:
+        'https://i.pinimg.com/736x/83/65/6e/83656e14a02950dc5840aee354f20b65.jpg',
+    },
+
   ];
 
   return (

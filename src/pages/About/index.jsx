@@ -39,19 +39,19 @@ function About() {
                 <h2>Nossos Valores</h2>
                 <div className="values-grid">
                     <div className="value-card">
-                        <h3>🎨 Qualidade</h3>
+                        <h3>Qualidade</h3>
                         <p>Só oferecemos produtos que atendem aos nossos altos padrões de qualidade e durabilidade.</p>
                     </div>
                     <div className="value-card">
-                        <h3>💚 Sustentabilidade</h3>
+                        <h3>Sustentabilidade</h3>
                         <p>Trabalhamos com marcas que compartilham nosso compromisso com práticas sustentáveis.</p>
                     </div>
                     <div className="value-card">
-                        <h3>🤝 Transparência</h3>
+                        <h3>Transparência</h3>
                         <p>Cremos em relacionamentos honestos com nossos clientes e parceiros de negócio.</p>
                     </div>
                     <div className="value-card">
-                        <h3>🚀 Inovação</h3>
+                        <h3>Inovação</h3>
                         <p>Estamos sempre buscando novas tendências e formas de melhorar sua experiência.</p>
                     </div>
                 </div>
