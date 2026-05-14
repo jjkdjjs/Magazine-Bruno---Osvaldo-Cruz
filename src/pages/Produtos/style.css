@@ -50,12 +50,10 @@
     line-height: 1.6;
 }
 
-/* --- ESTILIZAÇÃO DO FILTRO ATUALIZADA --- */
-
 .produtos-filters {
-    background: #0a0e27;
     border-bottom: 1px solid rgba(0, 255, 255, 0.2);
     padding: 40px 24px;
+    background-color: rgba(124, 176, 212, 0.171);
 }
 
 .filters-container {
@@ -113,7 +111,7 @@
 }
 
 .filter-select option {
-    background: #0a0e27;
+    background: #ffffff;
     color: white;
 }
 

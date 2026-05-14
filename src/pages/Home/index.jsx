@@ -26,13 +26,6 @@ function Home() {
                 </div>
             </section>
 
-            <section className="home-intro">
-                <div className="intro-text">
-                    <h1>Bem-vindo à LojaX</h1>
-                    <p>Descubra moda exclusiva, qualidade premium e as melhores ofertas da temporada. Sua estilo merece o melhor.</p>
-                </div>
-            </section>
-
             <section className="home-categories">
                 <h2>Categorias Populares</h2>
                 <div className="categories-grid">
@@ -80,7 +73,7 @@ function Home() {
                             onChange={(e) => setEmail(e.target.value)}
                             required
                         />
-                        <button type="submit">{subscribed ? "✓ Inscrito!" : "Inscrever"}</button>
+                        <button type="submit">{subscribed ? "Inscrito!" : "Inscrever"}</button>
                     </form>
                 </div>
             </section>
