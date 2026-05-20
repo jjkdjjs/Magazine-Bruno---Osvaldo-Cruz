@@ -15,6 +15,7 @@ function ConteudoPrincipal({ produtos: produtosExternos }) {
         {listaProdutos.map((produto) => (
           <Card
             key={produto.id}
+            id={produto.id}
             title={produto.nome}
             desc={produto.descricao}
             est={produto.em_estoque}

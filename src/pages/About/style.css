@@ -47,7 +47,9 @@
 
 .about-content {
     padding: 60px 24px;
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(127, 255, 212, 0.14);
+    border-radius: 24px;
 }
 
 .about-container {
@@ -67,7 +69,7 @@
 }
 
 .about-text p {
-    color: #666;
+    color: #cfdde8;
     line-height: 1.8;
     font-size: 1.05rem;
     margin-bottom: 15px;
@@ -80,13 +82,8 @@
 }
 
 .stat-card {
-    background: linear-gradient(
-        135deg,
-        rgba(0, 255, 255, 0.1),
-        rgba(0, 255, 255, 0.05)
-    );
-
-    border: 1px solid rgba(0, 255, 255, 0.3);
+    background: rgba(127, 255, 212, 0.08);
+    border: 1px solid rgba(127, 255, 212, 0.18);
     border-radius: 16px;
     padding: 30px;
     text-align: center;
@@ -133,13 +130,8 @@
 }
 
 .value-card {
-    background: linear-gradient(
-        135deg,
-        rgba(0, 255, 255, 0.1),
-        rgba(0, 255, 255, 0.05)
-    );
-
-    border: 1px solid rgba(0, 255, 255, 0.3);
+    background: rgba(127, 255, 212, 0.08);
+    border: 1px solid rgba(127, 255, 212, 0.18);
     border-radius: 16px;
     padding: 30px;
     text-align: center;
@@ -189,7 +181,7 @@
     padding: 30px;
     text-align: center;
     border-radius: 12px;
-    background: #f5f5f5;
+    background: rgba(255, 255, 255, 0.04);
     transition: all 0.3s ease;
 }
 

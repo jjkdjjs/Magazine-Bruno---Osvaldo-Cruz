@@ -1,59 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
 .card {
-    background: linear-gradient(135deg, rgba(0, 255, 255, 0.05), rgba(0, 255, 255, 0.02));
-    background-color: #1e1e1e;
-    border-radius: 16px;
-    width: 320px;
-    margin: 2rem 20px;
+    background: linear-gradient(180deg, rgba(10, 20, 30, 0.95), rgba(18, 26, 36, 0.92));
+    border-radius: 18px;
+    width: min(320px, 100%);
+    margin: 18px;
     overflow: hidden;
-    border: 1px solid rgba(0, 255, 255, 0.2);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0, 255, 255, 0.15);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     color: #fff;
     font-family: 'Inter', sans-serif;
     position: relative;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 .card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
-    border-color: aqua;
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.22);
+    border-color: rgba(0, 255, 255, 0.3);
 }
 
 .img {
     width: 100%;
-    height: 280px;
+    height: 260px;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.4s ease;
     display: block;
 }
 
 .card:hover .img {
-    transform: scale(1.1);
+    transform: scale(1.02);
 }
 
 .title {
-    font-size: 1.3rem;
+    font-size: 1.35rem;
     font-weight: 700;
-    margin: 18px 18px 8px;
-    color: #fff;
+    margin: 18px 18px 10px;
+    color: #f5faff;
     font-family: "Marcellus", serif;
-    line-height: 1.3;
+    line-height: 1.25;
 }
 
 .description {
-    font-size: 0.85rem;
-    margin: 0 18px;
-    color: #aaa;
-    line-height: 1.5;
+    font-size: 0.95rem;
+    margin: 0 18px 20px;
+    color: #c3cbd7;
+    line-height: 1.75;
+    min-height: 3.4rem;
 }
 
 .price {
-    font-size: 1.6rem;
+    font-size: 1.55rem;
     font-weight: 800;
-    margin: 18px 18px 16px;
+    margin: 0 18px 20px;
     color: aqua;
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.2);
 }
 
 .outOfStock {
@@ -76,15 +79,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: calc(100% - 36px);
-    padding: 12px;
-    gap: 12px;
+    width: 100%;
+    padding: 14px 0;
+    gap: 10px;
     background-color: aqua;
-    border-radius: 10px;
-    border: 2px solid aqua;
+    border-radius: 12px;
+    border: none;
     cursor: pointer;
-    transition: all 0.3s ease;
-    margin: 0 18px 18px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    margin: 0;
     font-weight: 700;
 }
 
@@ -100,20 +103,61 @@
 }
 
 .buttonBuy:hover {
-    background-color: transparent;
-    color: aqua;
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    background-color: rgba(0, 255, 255, 0.95);
+    transform: translateY(-1px);
+    box-shadow: 0 0 18px rgba(0, 255, 255, 0.28);
 }
 
 .buttonBuy:hover .text {
-    color: aqua;
-}
-
-.buttonBuy:hover .text {
-    color: aqua;
+    color: #000;
 }
 
 .buttonBuy:hover svg path {
-    fill: aqua;
+    fill: #000;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    padding: 0 18px 18px;
+    margin: 0;
+}
+
+.buttonDetails {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.buttonDetails:hover {
+    background: rgba(0, 255, 255, 0.1);
+    border-color: aqua;
+    color: aqua;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 520px) {
+    .card {
+        margin: 16px 8px;
+    }
+
+    .img {
+        height: 220px;
+    }
+
+    .actions {
+        gap: 10px;
+        padding-bottom: 16px;
+    }
 }

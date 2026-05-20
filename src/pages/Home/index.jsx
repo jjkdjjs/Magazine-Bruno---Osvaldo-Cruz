@@ -54,13 +54,6 @@ function Home() {
                 </div>
             </section>
 
-            <section className="home-promo">
-                <div className="promo-card">
-                    <h2>Promoção da Semana</h2>
-                    <p>Aproveite descontos exclusivos e frete grátis em produtos selecionados. Válido por tempo limitado!</p>
-                </div>
-            </section>
-
             <section className="home-newsletter">
                 <div className="newsletter-content">
                     <h2>Receba Nossas Ofertas</h2>

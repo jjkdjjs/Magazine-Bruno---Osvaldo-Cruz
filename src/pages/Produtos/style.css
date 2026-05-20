@@ -6,27 +6,15 @@
     flex-direction: column;
     gap: 0;
     min-height: 100vh;
-    background-color: #0a0e27;
+    background: transparent;
 }
 
 .produtos-header {
     text-align: center;
     margin-bottom: 0;
-    background: linear-gradient(135deg, #0a0e27 0%, #1a1a2e 100%);
     padding: 60px 24px;
     position: relative;
     overflow: hidden;
-}
-
-.produtos-header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 80% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 50%);
-    pointer-events: none;
 }
 
 .produtos-title {
@@ -51,9 +39,7 @@
 }
 
 .produtos-filters {
-    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
     padding: 40px 24px;
-    background-color: rgba(124, 176, 212, 0.171);
 }
 
 .filters-container {
@@ -84,11 +70,11 @@
 
 .filter-select {
     padding: 12px 12px;
-    border: 1px solid rgba(0, 255, 255, 0.3);
+    border: 1px solid rgba(0, 255, 255, 0.35);
     border-radius: 8px;
-    background: rgba(0, 255, 255, 0.05);
+    background: rgba(0, 255, 255, 0.1);
     font-size: 1rem;
-    color: white;
+    color: #fff;
     cursor: pointer;
     transition: all 0.3s ease;
     min-width: 160px;
@@ -98,6 +84,11 @@
     background-position: right 12px center;
     background-size: 16px;
     padding-right: 36px;
+}
+
+.filter-select option {
+    background: #131313;
+    color: #fff;
 }
 
 .filter-select:focus {

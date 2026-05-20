@@ -1,0 +1,136 @@
+.produto-detalhes-page {
+    min-height: 100vh;
+    padding: 40px 24px;
+    background-color: #135c58;
+    color: #fff;
+}
+
+.produto-detalhes-card {
+    max-width: 1160px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 40px;
+    align-items: center;
+    padding: 36px;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(0, 255, 255, 0.22);
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.produto-image {
+    width: 100%;
+    border-radius: 24px;
+    object-fit: cover;
+    max-height: 600px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+}
+
+.produto-info h1 {
+    font-size: 3rem;
+    margin-bottom: 18px;
+    color: aqua;
+    font-family: 'Marcellus', serif;
+}
+
+.categoria {
+    font-size: 0.95rem;
+    color: #80ffff;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin-bottom: 18px;
+}
+
+.descricao {
+    line-height: 1.9;
+    color: #e3e3e3;
+    margin-bottom: 26px;
+    font-size: 1.05rem;
+}
+
+.preco {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: aqua;
+    margin-bottom: 18px;
+}
+
+.estoque {
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.in-stock {
+    background: rgba(0, 255, 255, 0.12);
+    color: aqua;
+}
+
+.out-stock {
+    background: rgba(255, 69, 69, 0.16);
+    color: #ff9ea4;
+}
+
+.acoes {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
+    border-radius: 999px;
+    border: 1px solid aqua;
+    color: aqua;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.25s ease;
+}
+
+.back-button:hover {
+    background: aqua;
+    color: #000;
+}
+
+.produto-detalhes-fallback {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 36px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.22);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 20px;
+}
+
+.produto-detalhes-fallback h2 {
+    margin-bottom: 24px;
+    color: aqua;
+}
+
+@media (max-width: 900px) {
+    .produto-detalhes-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .produto-detalhes-page {
+        padding: 24px 16px;
+    }
+
+    .produto-detalhes-card {
+        padding: 24px;
+        gap: 24px;
+    }
+
+    .produto-info h1 {
+        font-size: 2.4rem;
+    }
+}
