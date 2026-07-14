@@ -1,11 +1,13 @@
 import styles from './ConteudoPrincipal.module.css';
 import Card from '../Card';
 import { useCarrinho } from "../../Context/CarrinhoContext";
+import { useNavigate } from 'react-router-dom';
 import produtos from '../../data/produtos';
 
 function ConteudoPrincipal({ produtos: produtosExternos }) {
 
   const { adicionarAoCarrinho } = useCarrinho();
+  const navigate = useNavigate();
 
   const listaProdutos = produtosExternos || produtos;
 
@@ -21,7 +23,10 @@ function ConteudoPrincipal({ produtos: produtosExternos }) {
             est={produto.em_estoque}
             price={produto.preco}
             img={produto.imagem}
-            onComprar={() => adicionarAoCarrinho(produto)}
+            onComprar={() => {
+              adicionarAoCarrinho(produto);
+              navigate('/carrinho');
+            }}
           />
         ))}
       </div>

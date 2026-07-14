@@ -88,21 +88,36 @@
     color: #aaa;
 }
 
-.quantidade-container button {
+.quantidade-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantidade-container button,
+.btn-remover,
+.btn-finalizar {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-quantity {
     width: 35px;
     height: 35px;
     border: 1px solid aqua;
     border-radius: 8px;
     background: transparent;
     color: aqua;
-    cursor: pointer;
     font-size: 18px;
-    transition: all 0.3s ease;
 }
 
-.quantidade-container button:hover {
+.btn-quantity:hover {
     background: aqua;
     color: #000;
+}
+
+.quantidade-container span {
+    color: #aaa;
 }
 
 .subtotal {

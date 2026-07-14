@@ -55,21 +55,30 @@ function Home() {
             </section>
 
             <section className="home-newsletter">
-                <div className="newsletter-content">
-                    <h2>Receba Nossas Ofertas</h2>
-                    <p>Inscreva-se e fique por dentro das novidades e promoções exclusivas da LojaX</p>
-                    <form className="newsletter-form" onSubmit={handleNewsletter}>
-                        <input
-                            type="email"
-                            placeholder="Seu email aqui..."
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                        />
-                        <button type="submit">{subscribed ? "Inscrito!" : "Inscrever"}</button>
-                    </form>
-                </div>
-            </section>
+    <div className="newsletter-content">
+        <h2>Receba Nossas Ofertas</h2>
+        <p>Inscreva-se e fique por dentro das novidades e promoções exclusivas da LojaX</p>
+
+        <form
+            className="newsletter-form"
+            action="https://formspree.io/f/myzrjejn"
+            method="POST"
+        >
+            <input
+                type="email"
+                name="email"
+                placeholder="Seu email aqui..."
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+            />
+
+            <button type="submit">
+                {subscribed ? "Inscrito!" : "Inscrever"}
+            </button>
+        </form>
+    </div>
+</section>
         </main>
     );
 }

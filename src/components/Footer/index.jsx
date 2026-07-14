@@ -12,9 +12,9 @@ export default function Footer() {
                 <div className={styles.linksSection}>
                     <h4>Navegação</h4>
                     <nav className={styles.footerNav}>
-                        <a href="/home">Home</a>
+                        <a href="/">Home</a>
                         <a href="/produtos">Produtos</a>
-                        <a href="/sobre">Carrinho</a>
+                        <a href="/carrinho">Carrinho</a>
                     </nav>
                 </div>
 

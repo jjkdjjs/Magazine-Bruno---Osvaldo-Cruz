@@ -1,18 +1,44 @@
 import "./style.css";
 import { useCarrinho } from "../../Context/CarrinhoContext";
+import { useNavigate } from 'react-router-dom';
 
 function Carrinho() {
+    const navigate = useNavigate();
 
     const {
         carrinho,
-        removerDoCarrinho
+        adicionarAoCarrinho,
+        diminuirQuantidade,
+        removerDoCarrinho,
+        limparCarrinho,
+        finalizarPedido
     } = useCarrinho();
+
+    function handleRemoverProduto(produto) {
+        if (produto.quantidade > 1) {
+            diminuirQuantidade(produto.id);
+            return;
+        }
+
+        removerDoCarrinho(produto.id);
+    }
 
     const total = carrinho.reduce(
         (acc, produto) =>
             acc + produto.preco * produto.quantidade,
         0
     );
+
+    function finalizarCompra() {
+        if (carrinho.length === 0) {
+            window.alert('Seu carrinho está vazio. Adicione um produto antes de finalizar.');
+            return;
+        }
+
+        finalizarPedido(carrinho, total);
+        limparCarrinho();
+        navigate('/finalizado');
+    }
 
     return (
         <main className="carrinho-page">
@@ -56,9 +82,27 @@ function Carrinho() {
 
                                 <div className="quantidade-container">
 
+                                    <button
+                                        type="button"
+                                        className="btn-quantity"
+                                        onClick={() => diminuirQuantidade(produto.id)}
+                                        aria-label={`Remover uma unidade de ${produto.nome}`}
+                                    >
+                                        -
+                                    </button>
+
                                     <span>
                                         Quantidade: {produto.quantidade}
                                     </span>
+
+                                    <button
+                                        type="button"
+                                        className="btn-quantity"
+                                        onClick={() => adicionarAoCarrinho(produto)}
+                                        aria-label={`Adicionar uma unidade de ${produto.nome}`}
+                                    >
+                                        +
+                                    </button>
 
                                 </div>
 
@@ -77,9 +121,7 @@ function Carrinho() {
 
                                 <button
                                     className="btn-remover"
-                                    onClick={() =>
-                                        removerDoCarrinho(produto.id)
-                                    }
+                                    onClick={() => handleRemoverProduto(produto)}
                                 >
                                     Remover
                                 </button>
@@ -114,7 +156,7 @@ function Carrinho() {
 
                     </div>
 
-                    <button className="btn-finalizar">
+                    <button className="btn-finalizar" onClick={finalizarCompra}>
                         Finalizar Compra
                     </button>
 
