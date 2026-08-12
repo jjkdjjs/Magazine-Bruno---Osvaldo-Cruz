@@ -42,6 +42,79 @@
     padding: 40px 24px;
 }
 
+.form-busca {
+    max-width: 600px;
+    margin: 0 auto 32px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.label-busca {
+    font-weight: 500;
+    color: aqua;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-family: "Marcellus", serif;
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid rgba(0, 255, 255, 0.35);
+    border-radius: 8px;
+    background: rgba(0, 255, 255, 0.1);
+    font-size: 1rem;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: aqua;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+.input-group button {
+    padding: 12px 24px;
+    background: transparent;
+    border: 1px solid aqua;
+    border-radius: 8px;
+    color: aqua;
+    font-family: "Marcellus", serif;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.input-group button:hover {
+    background: aqua;
+    color: #131313;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+.sem-resultado {
+    text-align: center;
+    color: #aaa;
+    font-size: 1.1rem;
+    padding: 40px 0;
+    font-family: "Marcellus", serif;
+}
+
 .filters-container {
     display: flex;
     gap: 32px;

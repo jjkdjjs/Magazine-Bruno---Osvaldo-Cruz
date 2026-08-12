@@ -4,15 +4,21 @@ import ConteudoPrincipal from "../../components/ConteudoPrincipal";
 import produtos from "../../data/produtos";
 
 function Produtos() {
+    const [termoPesquisa, setTermoPesquisa] = useState("");
     const [categoriaFilter, setCategoriaFilter] = useState("");
     const [precoFilter, setPrecoFilter] = useState("");
     const [ordenacao, setOrdenacao] = useState("nome");
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+    };
+
     const produtosFiltrados = produtos.filter(produto => {
         const matchesCategoria = !categoriaFilter || produto.categoria === categoriaFilter;
         const matchesPreco = !precoFilter || checkPrecoRange(produto.preco, precoFilter);
+        const matchesBusca = !termoPesquisa || produto.nome.toLowerCase().includes(termoPesquisa.toLowerCase());
 
-        return matchesCategoria && matchesPreco;
+        return matchesCategoria && matchesPreco && matchesBusca;
     });
 
     const produtosOrdenados = [...produtosFiltrados].sort((a, b) => {
@@ -48,6 +54,22 @@ function Produtos() {
             </section>
 
             <section className="produtos-filters">
+                <form className="form-busca" onSubmit={handleSubmit}>
+                    <label className="label-busca" htmlFor="pesquisa-produtos">
+                        Pesquisar produtos
+                    </label>
+                    <div className="input-group">
+                        <input
+                            id="pesquisa-produtos"
+                            type="text"
+                            value={termoPesquisa}
+                            onChange={(event) => setTermoPesquisa(event.target.value)}
+                            placeholder="Digite o nome do produto"
+                        />
+                        <button type="submit">Buscar</button>
+                    </div>
+                </form>
+
                 <div className="filters-container">
                     <div className="filter-group">
                         <label htmlFor="categoria">Categoria:</label>
@@ -97,12 +119,18 @@ function Produtos() {
                 </div>
 
                 <div className="results-info">
-                    <p>{produtosFiltrados.length} produto{produtosFiltrados.length !== 1 ? 's' : ''} encontrado{produtosFiltrados.length !== 1 ? 's' : ''}</p>
+                    <p>{produtosOrdenados.length} produto{produtosOrdenados.length !== 1 ? 's' : ''} encontrado{produtosOrdenados.length !== 1 ? 's' : ''}</p>
                 </div>
             </section>
 
             <section className="produtos-content">
-                <ConteudoPrincipal produtos={produtosOrdenados} />
+                {produtosOrdenados.length === 0 ? (
+                    <p className="sem-resultado">
+                        Nenhum produto encontrado para: "{termoPesquisa}"
+                    </p>
+                ) : (
+                    <ConteudoPrincipal produtos={produtosOrdenados} />
+                )}
             </section>
         </main>
     );
